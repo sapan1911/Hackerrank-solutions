@@ -1,0 +1,29 @@
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+
+# Complete the birthdayCakeCandles function below.
+def birthdayCakeCandles(ar):
+    ar.sort(reverse=True)
+    c= Counter(ar)
+    count=c.most_common(1)
+    result = count[0][1]
+    return result
+    
+
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    ar_count = int(input())
+
+    ar = list(map(int, input().rstrip().split()))
+
+    result = birthdayCakeCandles(ar)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
