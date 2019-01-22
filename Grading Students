@@ -1,0 +1,15 @@
+def gradingStudents(grades):
+    #
+    result = []
+    for grade in grades:
+        newGrade = 0
+        c = grade % 5
+        if(grade >= 38 and 5-c < 3 and c != 0):
+            newGrade = grade + 5- c
+            if (newGrade > 100):
+                newGrade = 100
+            result.append(newGrade)
+        else:
+            newGrade = grade 
+            result.append(newGrade)
+    return result
