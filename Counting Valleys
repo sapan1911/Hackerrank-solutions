@@ -1,0 +1,19 @@
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the countingValleys function below.
+def countingValleys(n, s):
+    countd=0
+    countu=0
+    count=0
+    for i in range(n):
+        if s[i]=="D":
+            countd+=1
+        else:
+            countu+=1
+            if countd==countu:
+                count+=1
+    return count
