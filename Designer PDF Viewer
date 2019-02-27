@@ -1,0 +1,20 @@
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the designerPdfViewer function below.
+def designerPdfViewer(h, word):
+    l=list(word)
+    n=len(l)
+    hi=[]
+    for i in range(n):
+        ht=ord(l[i])-97
+        hi.append(ht)
+    m=[]
+    for j in hi:
+        m.append(h[j])
+    maxi=max(m)
+    result=n*maxi
+    return result
