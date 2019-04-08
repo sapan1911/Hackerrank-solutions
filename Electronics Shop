@@ -1,0 +1,21 @@
+import os
+import sys
+
+#
+# Complete the getMoneySpent function below.
+#
+def getMoneySpent(keyboards, drives, b):
+li2=[]
+    final=[]
+    for i in range(n):
+        for j in range(m):
+             li=keyboards[i]+drives[j]
+             li2.append(li)
+    for k in range(len(li2)):    
+        if li2[k]<=b:
+            final.append(li2[k])
+    if len(final)!=0:
+        result = max(final)
+        else : 
+        result =-1
+    return result
